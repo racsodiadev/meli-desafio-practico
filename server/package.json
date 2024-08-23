@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "up-version": "npm version patch",
+    "up-major": "npm version major",
+    "up-minor": "npm version minor",
     "build": "npx tsc",
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",

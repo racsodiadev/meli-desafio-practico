@@ -1,4 +1,5 @@
 import express, { Express, Request, Response } from 'express';
+import { version } from '../package.json';
 import enviroments from './configs/enviroment';
 
 import { routes } from './api';
@@ -6,9 +7,11 @@ import { routes } from './api';
 const app: Express = express();
 const port = enviroments.PORT;
 
-
+app.get('/health', (req: Request, res: Response) => {
+  res.send({ status: 'online', version: version });
+});
 app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server');
+  res.send('BFF for MercadoLibre Test');
 });
 
 routes(app);
