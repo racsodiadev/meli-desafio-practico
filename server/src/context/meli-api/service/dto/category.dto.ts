@@ -5,7 +5,8 @@ export interface Category {
   name: string;
 }
 
-export interface CategoryDataDTO {
+export type CategoryDataResponseDTO = CategoryData | null;
+export interface CategoryData {
   id: string;
   name: string;
   picture: string;

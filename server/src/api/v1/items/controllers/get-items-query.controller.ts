@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { itemsQuery } from '../../../../context/meli-api/app/use-case/get-items-query.case';
+import { itemsQuery } from '../../../../context/meli-api/app/use-case/get-items-query.usecase';
 
 export const itemQueryController = async (req: Request, res: Response) => {
   const { q } = req.query;

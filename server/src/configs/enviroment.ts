@@ -8,6 +8,10 @@ const enviroments = {
   MELI: {
     BASE_URL: process.env.MELI_BASE_URL ?? '',
   },
+  AUTHOR: {
+    NAME: process.env.AUTHOR_NAME ?? '',
+    LASTNAME: process.env.AUTHOR_LASTNAME ?? '',
+  },
 };
 
 export default enviroments;
