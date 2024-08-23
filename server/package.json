@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
@@ -22,6 +21,7 @@
   },
   "homepage": "https://github.com/racsodiadev/meli-desafio-practico/blob/main/README.md",
   "dependencies": {
+    "axios": "^1.7.4",
     "dotenv": "^16.4.5",
     "express": "^4.19.2"
   },
