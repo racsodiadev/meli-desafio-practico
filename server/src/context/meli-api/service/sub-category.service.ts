@@ -11,7 +11,7 @@ export const subCategory = async (category: string): Promise<CategoryDataRespons
     response = categories.data;
     return response;
   } catch (error) {
-    console.error('error :>> ', error);
+    console.error('SubCategoryService error :>> ', error);
     return response;
   }
 };

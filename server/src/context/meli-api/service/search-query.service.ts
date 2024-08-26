@@ -11,7 +11,7 @@ export const searchQuery = async (dto: ItemRequestDTO): Promise<MeliSearchQueryD
     response = search.data;
     return response;
   } catch (error) {
-    console.error('error :>> ', error);
+    console.error('SearchQueryService error :>> ', error);
     return response;
   }
 };
