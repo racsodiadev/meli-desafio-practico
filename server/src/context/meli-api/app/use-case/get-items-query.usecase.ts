@@ -11,7 +11,7 @@ export const itemsQuery = async (query: ItemRequestDTO): Promise<ItemResponseDTO
   const categories: string[] = [];
   const searchResult: MeliSearchQueryDTO = await getItemByQueryContract(query);
 
-  const itemResults: Item[] = searchResult?.results ?? [];
+  let itemResults: Item[] = searchResult?.results ?? [];
 
   itemResults.map((result) => {
     categoriesResult.push(result.category_id ?? '');
@@ -22,7 +22,7 @@ export const itemsQuery = async (query: ItemRequestDTO): Promise<ItemResponseDTO
   categoriePaths.map((category) => {
     categories.push(category.name);
   });
-
+  itemResults = itemResults.slice(0,4);
   const items: ItemResponseDTO = {
     author: {
       name: enviroments.AUTHOR.NAME,
