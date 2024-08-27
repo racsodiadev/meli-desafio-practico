@@ -1,7 +1,6 @@
 
 
 const ItemDetailContainer = (props: any) => {
-    console.log('props :>> ', props);
     return (
         <div id="item-detail" className="container item-detail-container">
             <div className="row">

@@ -8,7 +8,6 @@ import BreadCrumb from "../components/common/BreadCrumb";
 const ItemDetail = () => {
 
     const { id } = useParams()
-    console.log('location :>> ', id)
     const { data, loading, error } = useItemByID(id ?? '')
 
 
