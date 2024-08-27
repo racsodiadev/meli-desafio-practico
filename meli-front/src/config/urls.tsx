@@ -3,13 +3,13 @@ import enviroments from './enviroment';
 const URLS = {
   bff: {
     base: () => {
-      return `${enviroments.BFF.BASE_URL}/`;
+      return `${enviroments.BFF.BASE_URL}`;
     },
     items: () => {
-      return `${enviroments.BFF.BASE_URL}/api/v1/items/`;
+      return `/api/${enviroments.BFF.API_VERSION}/items`;
     },
     item: () => {
-      return `${enviroments.BFF.BASE_URL}/api/v1/item/`;
+      return `/api/${enviroments.BFF.API_VERSION}/item`;
     },
 
   },

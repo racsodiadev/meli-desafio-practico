@@ -1,6 +1,9 @@
 const Loader = () => {
     return (
-        <div className="loader"></div>
+        <div className="center">
+            <div className="loader"></div>
+        </div>
+
     )
 }
 
