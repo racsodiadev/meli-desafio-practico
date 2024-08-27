@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useItemByID } from "../services/ItemService";
 import Loader from "../components/common/Loader";
 import ItemDetailContainer from "../components/ItemDetailContainer";
+import BreadCrumb from "../components/common/BreadCrumb";
 
 
 const ItemDetail = () => {
@@ -19,9 +20,13 @@ const ItemDetail = () => {
     }
 
     if (data) {
-        console.log('data :>> ', data);
+
         return (
-            <ItemDetailContainer item={data.item}/>
+            <>
+                <BreadCrumb categories={localStorage.getItem("categories") ?? ""}/>
+                 <ItemDetailContainer item={data.item}/>
+            </>
+       
         )
     }
 

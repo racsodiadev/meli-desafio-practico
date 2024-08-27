@@ -17,6 +17,7 @@ const ItemList = () => {
     }
 
     if (data) {
+        localStorage.setItem("categories", data.categories.join( " > " ))
         return (
             <>
                 <BreadCrumb categories={data.categories} />
